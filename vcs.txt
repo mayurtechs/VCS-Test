@@ -1,0 +1,225 @@
+dmin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test
+$ git init
+Initialized empty Git repository in C:/Users/Admin/Desktop/Test/.git/
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git config --global user.name -g mayurtechs
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git config --global user.email -g maddydiwan@gmail.com
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ touch sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sample1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git commit -m "Initial Commit"
+[master (root-commit) 23d24ee] Initial Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git commit -m "Second Commit"
+[master 6206254] Second Commit
+ 1 file changed, 1 insertion(+)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git commit -m "Time Added"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git log
+commit 62062545660e5ccdce1a2ce5ca486f3a4ebdb694 (HEAD -> master)
+Author: -g <-g>
+Date:   Fri Jun 25 16:40:37 2021 +0530
+
+    Second Commit
+
+commit 23d24ee67297eec795082e37f6232fe02918c66f
+Author: -g <-g>
+Date:   Fri Jun 25 16:39:09 2021 +0530
+
+    Initial Commit
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git commit -m "Time Added"
+[master 455d5be] Time Added
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git log
+commit 455d5be6b0c90666a6cba9fc60aff0cbca1190aa (HEAD -> master)
+Author: -g <-g>
+Date:   Fri Jun 25 16:43:26 2021 +0530
+
+    Time Added
+
+commit 62062545660e5ccdce1a2ce5ca486f3a4ebdb694
+Author: -g <-g>
+Date:   Fri Jun 25 16:40:37 2021 +0530
+
+    Second Commit
+
+commit 23d24ee67297eec795082e37f6232fe02918c66f
+Author: -g <-g>
+Date:   Fri Jun 25 16:39:09 2021 +0530
+
+    Initial Commit
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git branch demo
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git checkout demo
+Switched to branch 'demo'
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git commit -m "Demo Added"
+On branch demo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sample1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git log
+commit 455d5be6b0c90666a6cba9fc60aff0cbca1190aa (HEAD -> demo, master)
+Author: -g <-g>
+Date:   Fri Jun 25 16:43:26 2021 +0530
+
+    Time Added
+
+commit 62062545660e5ccdce1a2ce5ca486f3a4ebdb694
+Author: -g <-g>
+Date:   Fri Jun 25 16:40:37 2021 +0530
+
+    Second Commit
+
+commit 23d24ee67297eec795082e37f6232fe02918c66f
+Author: -g <-g>
+Date:   Fri Jun 25 16:39:09 2021 +0530
+
+    Initial Commit
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git commit -m "Demo Added"
+[demo 4a31eb1] Demo Added
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git log
+commit 4a31eb1b9cf1a4b833a0b10fe6aa23bff13c9e5d (HEAD -> demo)
+Author: -g <-g>
+Date:   Fri Jun 25 16:51:51 2021 +0530
+
+    Demo Added
+
+commit 455d5be6b0c90666a6cba9fc60aff0cbca1190aa (master)
+Author: -g <-g>
+Date:   Fri Jun 25 16:43:26 2021 +0530
+
+    Time Added
+
+commit 62062545660e5ccdce1a2ce5ca486f3a4ebdb694
+Author: -g <-g>
+Date:   Fri Jun 25 16:40:37 2021 +0530
+
+    Second Commit
+
+commit 23d24ee67297eec795082e37f6232fe02918c66f
+Author: -g <-g>
+Date:   Fri Jun 25 16:39:09 2021 +0530
+
+    Initial Commit
+
+
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        sample1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git branch -a
+* demo
+  master
+
+
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git add sample1.txt
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git commit -m "Checkout master"
+[demo 5f92e38] Checkout master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        sample1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (demo)
+$ git checkout -f master
+Switched to branch 'master'
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$ git merge demo
+Updating 455d5be..5f92e38
+Fast-forward
+ sample1.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Admin@DESKTOP-4KMV5F4 MINGW64 ~/Desktop/Test (master)
+$
